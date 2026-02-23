@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Island Edge Experiences | Saint Lucia Tourism</title>
+  <meta name="description" content="Curated luxury & cultural tourism experiences in Saint Lucia—private cruises, wellness, local culture, and seamless concierge planning." />
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#121b2e;
+      --text:#e9eefc;
+      --muted:#b7c0dd;
+      --accent:#39d3c6;
+      --accent2:#ffb86b;
+      --border:rgba(255,255,255,.10);
+      --shadow: 0 12px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", sans-serif;
+      background: radial-gradient(1200px 800px at 20% 10%, rgba(57,211,198,.18), transparent 55%),
+                  radial-gradient(1000px 700px at 80% 0%, rgba(255,184,107,.16), transparent 50%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:980px; margin:0 auto; padding:28px 18px 60px;}
+    .topbar{
+      display:flex; gap:14px; align-items:center; justify-content:space-between;
+      padding:14px 16px; border:1px solid var(--border); border-radius:16px; background:rgba(18,27,46,.7);
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow);
+    }
+    .brand{display:flex; gap:10px; align-items:center}
+    .logo{
+      width:38px; height:38px; border-radius:12px;
+      background: conic-gradient(from 210deg, var(--accent), var(--accent2), var(--accent));
+      box-shadow: 0 10px 24px rgba(0,0,0,.35);
+    }
+    .brand h1{font-size:16px; margin:0}
+    .brand p{margin:0; color:var(--muted); font-size:12px}
+    .cta{
+      display:flex; gap:10px; align-items:center;
+      font-size:13px; color:var(--muted);
+    }
+    .pill{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 12px; border-radius:999px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      color: var(--text);
+      font-weight:600;
+      white-space:nowrap;
+    }
+
+    header{
+      margin-top:22px;
+      padding:26px 18px;
+      border:1px solid var(--border);
+      border-radius:18px;
+      background: linear-gradient(180deg, rgba(18,27,46,.85), rgba(18,27,46,.55));
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    header:before{
+      content:"";
+      position:absolute; inset:-30px -50px auto auto;
+      width:240px; height:240px; border-radius:50%;
+      background: radial-gradient(circle at 30% 30%, rgba(57,211,198,.35), transparent 60%);
+      filter: blur(4px);
+    }
+    .headline{
+      font-size:36px; line-height:1.15; margin:0 0 10px;
+      letter-spacing:-0.5px;
+    }
+    .sub{
+      margin:0;
+      color:var(--muted);
+      max-width:760px;
+      font-size:16px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:16px;
+      margin-top:16px;
+    }
+    @media (min-width: 860px){
+      .grid{grid-template-columns: 1.05fr .95fr;}
+    }
+    .card{
+      border:1px solid var(--border);
+      border-radius:18px;
+      background: rgba(18,27,46,.65);
+      box-shadow: var(--shadow);
+      padding:18px;
+    }
+    .card h2{
+      margin:0 0 8px;
+      font-size:18px;
+      letter-spacing:-0.2px;
+    }
+    .card p{margin:0 0 10px; color:var(--muted)}
+    .badgeRow{display:flex; flex-wrap:wrap; gap:10px; margin-top:10px}
+    .badge{
+      font-size:12px;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      color:var(--text);
+      background: rgba(255,255,255,.03);
+    }
+    figure{
+      margin:0; border-radius:16px; overflow:hidden;
+      border:1px solid var(--border);
+      background:#0e1730;
+    }
+    figure img{
+      width:100%; height:auto; display:block;
+    }
+    figcaption{
+      padding:12px 14px;
+      color:var(--muted);
+      font-size:13px;
+      border-top:1px solid var(--border);
+    }
+    .quote{
+      margin:10px 0 0;
+      padding:14px 14px;
+      border-left:4px solid var(--accent);
+      background: rgba(57,211,198,.08);
+      border-radius:12px;
+      color:var(--text);
+    }
+    .quote small{display:block; margin-top:8px; color:var(--muted)}
+    ul{margin:10px 0 0 18px; color:var(--muted)}
+    li{margin:6px 0}
+    .contact{
+      display:grid; gap:10px;
+      grid-template-columns: 1fr;
+      margin-top:10px;
+    }
+    @media (min-width: 640px){
+      .contact{grid-template-columns: 1fr 1fr;}
+    }
+    .contact div{
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:12px;
+      background: rgba(255,255,255,.03);
+      color:var(--muted);
+      font-size:13px;
+    }
+    footer{
+      margin-top:18px;
+      color:var(--muted);
+      font-size:12px;
+      text-align:center;
+      opacity:.9;
+    }
+    .hint{color:var(--muted); font-size:12px; margin-top:8px}
+    .highlight{color:var(--text)}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>Island Edge Experiences</h1>
+          <p>Curated Luxury & Cultural Tourism • Saint Lucia</p>
+        </div>
+      </div>
+      <div class="cta">
+        <span class="pill">Custom Itineraries</span>
+        <span class="pill">VIP Transfers</span>
+      </div>
+    </div>
+
+    <!-- 1) Lead Paragraph -->
+    <header>
+      <h2 class="headline">Escape the brochure—experience Saint Lucia with purpose, comfort, and wow moments.</h2>
+      <p class="sub">
+        <span class="highlight">Island Edge Experiences</span> creates curated luxury and cultural tourism packages for travelers who want authenticity
+        without the stress of planning. From private sea cruises and local culinary discovery to wellness and romance,
+        we design journeys that feel personal, seamless, and unforgettable.
+      </p>
+      <div class="badgeRow" aria-label="Brand highlights">
+        <span class="badge">Private Experiences</span>
+        <span class="badge">Local Culture</span>
+        <span class="badge">Luxury Planning</span>
+        <span class="badge">Sustainable Partners</span>
+      </div>
+    </header>
+
+    <div class="grid">
+      <!-- 2) Relevant Image -->
+      <section class="card">
+        <h2>2) Relevant Image</h2>
+        <figure>
+          <!-- Replace the src with your image file name if you upload locally (e.g., "hero.png") -->
+          <!-- If using Google Sites/WordPress, upload the image there and insert it instead. -->
+          <img src="hero.png" alt="Couple on a catamaran at sunset overlooking the Pitons in Saint Lucia" />
+          <figcaption>
+            Suggested hero image: a sunset catamaran moment with the Pitons in view—showing privacy, romance, and Saint Lucia’s iconic scenery.
+            If you don’t have a photo, you can keep this description and upload any similar image later.
+          </figcaption>
+        </figure>
+        <p class="hint">
+          Tip: If you want, name your generated image file <b>hero.png</b> and place it in the same folder as this HTML file.
+        </p>
+      </section>
+
+      <!-- 3) Personal Experience -->
+      <section class="card">
+        <h2>3) Personal Experience</h2>
+        <p>
+          I built Island Edge Experiences after years working in hospitality operations and finance, where I saw a consistent gap:
+          guests want experiences that feel authentic and premium, but they don’t want to manage dozens of bookings, vendors, and timelines.
+          My background helps me design tourism products that are not only memorable, but also reliable, organized, and value-driven.
+        </p>
+
+        <div class="quote">
+          “Island Edge designed our anniversary trip, and every detail was flawless—from VIP transfer to a private chef dinner overlooking the Pitons.
+          What stood out most was how personalized everything felt. It wasn’t just a vacation; it was a memory.”
+          <small>— Amanda R., Toronto, Canada</small>
+        </div>
+      </section>
+    </div>
+
+    <!-- 4) Main Body -->
+    <section class="card" style="margin-top:16px;">
+      <h2>4) Main Body: Our Product (Tourism Service)</h2>
+      <p>
+        Island Edge Experiences specializes in premium tourism packages that combine luxury comfort with real Saint Lucian culture.
+        We offer tiered options—<b>Classic</b>, <b>Premium</b>, and <b>Elite</b>—with full concierge coordination, transparent pricing,
+        and high-touch service. Our experiences are built around quality partners and smooth logistics, so your day flows without stress.
+        Whether you’re visiting for a honeymoon, a wellness reset, or a corporate retreat, we tailor your itinerary based on your interests,
+        energy level, and preferred pace. We also prioritize responsible tourism by working with vetted local guides and eco-conscious vendors.
+      </p>
+
+      <h3 style="margin:14px 0 6px; font-size:15px;">Experience Menu</h3>
+      <ul>
+        <li>Private sunset catamaran cruises & snorkeling stops</li>
+        <li>Guided Piton photo stops and scenic island routes</li>
+        <li>Farm-to-table culinary experiences & local cooking sessions</li>
+        <li>Wellness itineraries: spa days, yoga, and quiet escapes</li>
+        <li>Couples experiences: private beach setups & chef dinners</li>
+        <li>Executive retreats: meeting-friendly planning & group logistics</li>
+      </ul>
+
+      <h3 style="margin:14px 0 6px; font-size:15px;">Coordinates (Contact)</h3>
+      <div class="contact">
+        <div><b>Email:</b> reservations@islandedgeexperiences.com</div>
+        <div><b>Phone/WhatsApp:</b> +1 (758) 555-2026</div>
+        <div><b>Location:</b> Saint Lucia (service island-wide)</div>
+        <div><b>Hours:</b> Mon–Sat, 9:00am–6:00pm</div>
+      </div>
+    </section>
+
+    <!-- 5) Discussion Question -->
+    <section class="card" style="margin-top:16px;">
+      <h2>5) Discussion Question</h2>
+      <p>
+        When planning your next trip, what matters most to you—and why: <b>authentic culture</b>, <b>privacy/exclusivity</b>,
+        <b>sustainability</b>, or <b>best value for money</b>?
+      </p>
+      <p class="hint">Add a comment box if your platform supports it (WordPress does). On a simple site, invite replies by email or social media.</p>
+    </section>
+
+    <footer>
+      © 2026 Island Edge Experiences • Crafted for your entrepreneurship assignment (Hyatt’s 5-component blog framework)
+    </footer>
+  </div>
+</body>
+</html>
